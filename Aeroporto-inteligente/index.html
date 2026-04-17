@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aeroporto Inteligente Pró</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="painel">
+        <h1>🛫 Torre de Controle</h1>
+        
+        <div class="info">
+            <p><strong>Voo:</strong> <span id="cod">---</span></p>
+            <p><strong>Status:</strong> <span id="stat">No Solo</span></p>
+            <p><strong>Altitude:</strong> <span id="alt">0</span> ft</p>
+            <p><strong>Combustível:</strong> <span id="fuel">100</span>%</p>
+        </div>
+
+        <div class="pista">
+           
+            <img src="IMG/viao.png" id="aviao">
+        </div>
+
+        <div class="botoes">
+            <button class="btn-carga" onclick="meuVoo.decolar()">Decolar</button>
+            <button onclick="meuVoo.ganharAltitude()">Subir +</button>
+            <button class="btn-jato" onclick="meuVoo.pousar()">Pousar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
