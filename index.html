@@ -2,33 +2,42 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Aeroporto Inteligente Pró</title>
+    <title>Aeroporto Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="painel">
         <h1>🛫 Torre de Controle</h1>
         
+        <!-- Formulário de Registro -->
         <div class="info">
-            <p><strong>Voo:</strong> <span id="cod">---</span></p>
-            <p><strong>Status:</strong> <span id="stat">No Solo</span></p>
-            <p><strong>Altitude:</strong> <span id="alt">0</span> ft</p>
-            <p><strong>Combustível:</strong> <span id="fuel">100</span>%</p>
+            <input type="text" id="iptCod" placeholder="Cód. voo(exem: LATAM-123)">
+            <input type="text" id="iptOri" placeholder="Origem">
+            <input type="text" id="iptDes" placeholder="Destino">
+            <button id="btnRegistrar" class="btn-carga"> Registrar Voo</button>
         </div>
 
+        <div id="mensagem" style="font-weight: bold; margin: 10px;"></div>
+
+        <!-- Dados do Voo -->
+        <div class="info">
+            <p><strong>Voo:</strong> <span id="resCod">---</span></p>
+            <p><strong>Status:</strong> <span id="stat">No Solo</span></p>
+            <p><strong>Altitude:</strong> <span id="alt">0</span> ft</p>
+        </div>
+
+        <!-- Pista Visual -->
         <div class="pista">
-           
             <img src="IMG/viao.png" id="aviao">
         </div>
 
+        <!-- Botões de Controle (Só funcionam após o registro) -->
         <div class="botoes">
-            <button class="btn-carga" onclick="meuVoo.decolar()">Decolar</button>
-            <button onclick="meuVoo.ganharAltitude()">Subir +</button>
-            <button class="btn-jato" onclick="meuVoo.pousar()">Pousar</button>
+            <button id="btnDecolar" class="btn-jato"> Decolar agora!</button>
+            <button id="btnPousar">Pousar</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
